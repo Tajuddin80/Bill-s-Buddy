@@ -2,7 +2,6 @@
 import { createBrowserRouter } from "react-router";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import Home from "../Pages/Home/Home";
-
 import Bills from "../Pages/BillsPage/Bills";
 import Profile from "../Pages/Profile/Profile";
 import LandingLayout from "../layouts/LandingLayout/LandingLayout";
@@ -15,14 +14,13 @@ export const router = createBrowserRouter([
   {
     path: "/",
     Component: LandingLayout,
-  
     errorElement: ErrorPage,
     children: [
       {
         index: true,
-        loader: ()=> fetch('slider.json'),
+        loader: ()=> fetch('/slider.json'),
         hydrateFallbackElement: <Loader></Loader>,
-        Component: Landing,
+       element: <Landing></Landing>
       },
       {
         path: "/home",
