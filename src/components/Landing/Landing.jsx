@@ -1,8 +1,10 @@
 import React from "react";
 import CountUp from "react-countup";
-
+import ImageSwiper from '../../components/ImageSwiper/ImageSwiper';
+import { useLoaderData } from 'react-router';
 import { Typewriter } from "react-simple-typewriter";
 const Landing = () => {
+  const data = useLoaderData()
   return (
     <div className="flex-col flex justify-center items-center mt-20 space-y-10">
       <h1 className=" text-[4.5rem] font-bold ">
@@ -75,6 +77,14 @@ const Landing = () => {
           <p className="text-2xl">Scheduled Bills</p>
         </div>
       </div>
+
+      {/* Image Swiper */}
+
+      <div className='mt-20 w-11/12 mx-auto'>
+            <ImageSwiper data={data}></ImageSwiper>
+        </div>
+
+        {/* Frequently Asked Questions */}
       <div className="my-20">
         <h3 className="text-center mb-3">
           <span className="text-[3rem] font-bold  text-[#ff5c15]">
@@ -87,7 +97,6 @@ const Landing = () => {
           <span className="  text-[#ff5c15]">support</span> team for assistance.
         </h5>
 
-        {/* faq section */}
         <div className=" w-11/12 mx-auto mt-25">
           <div className="collapse collapse-plus bg-base-100 border border-base-300">
             <input type="radio" name="my-accordion-3" defaultChecked />

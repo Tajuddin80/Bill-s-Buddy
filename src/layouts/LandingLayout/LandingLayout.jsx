@@ -4,6 +4,7 @@ import Footer from '../../components/Footer/Footer';
 import { Outlet } from 'react-router';
 
 const LandingLayout = () => {
+   
     return (
         <div className='min-h-screen flex flex-col'>
             <div>

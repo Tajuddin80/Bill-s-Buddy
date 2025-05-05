@@ -9,15 +9,19 @@ import LandingLayout from "../layouts/LandingLayout/LandingLayout";
 import Landing from "../components/Landing/Landing";
 import SignUp from "../Pages/SignUp/SignUp";
 import SignIn from "../Pages/SignIn/SignIn";
+import Loader from "../components/Loader/Loader";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     Component: LandingLayout,
+  
     errorElement: ErrorPage,
     children: [
       {
         index: true,
+        loader: ()=> fetch('slider.json'),
+        hydrateFallbackElement: <Loader></Loader>,
         Component: Landing,
       },
       {
