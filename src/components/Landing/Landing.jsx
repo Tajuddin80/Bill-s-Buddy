@@ -33,14 +33,14 @@ const Landing = () => {
       </div>
       <div className="flex gap-4 mt-3">
         <div>
-          <img src="https://billbuddy.app/images/playstore.png" alt="" />
+          <img src="../../../src/assets/playstore.png" alt="" />
         </div>
         <div>
-          <img src="https://billbuddy.app/images/appstore.png" alt="" />
+          <img src="../../../src/assets/appstore.png" alt="" />
         </div>
       </div>
       <div className=" text-center ">
-        <img src="https://billbuddy.app/images/background-1.svg" alt="" />
+        <img src="../../../src/assets/background-1.svg" alt="" />
       </div>
       <div className="flex flex-col gap-3 my-20">
         <h3 className="text-[#ff5c15] text-[3rem] font-normal">
