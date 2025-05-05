@@ -5,10 +5,10 @@ import { Link, NavLink } from 'react-router';
 const Navbar = () => {
 
     const links = <>
-<li><NavLink to="/home" className={(({ isActive }) => isActive ? "active" : "")}>Home</NavLink></li>
-<li><NavLink to="/home" className={({ isActive }) => isActive ? "active" : ""}>Services</NavLink></li>
-<li><NavLink to="/bills" className={({ isActive }) => isActive ? "active" : ""}>Bill's</NavLink></li>
-<li><NavLink to="/profile" className={({ isActive }) => isActive ? "active" : ""}>Profile</NavLink></li>
+<li><NavLink to="/home" className={(({ isActive }) => isActive ? "active" : "")}>HOME</NavLink></li>
+<li><NavLink to="/home" className={({ isActive }) => isActive ? "active" : ""}>SERVICES</NavLink></li>
+<li><NavLink to="/bills" className={({ isActive }) => isActive ? "active" : ""}>BILL</NavLink></li>
+<li><NavLink to="/profile" className={({ isActive }) => isActive ? "active" : ""}>PROFILE</NavLink></li>
     </>
     return (
         <div className="navbar shadow-sm w-11/12 rounded-2xl mt-5 bg-orange-50 mx-auto">
@@ -27,10 +27,10 @@ const Navbar = () => {
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 flex gap-3">
-          <li><NavLink to="/home" className={ (({ isActive }) => isActive ? "active" : "")}>Home</NavLink></li>
-      <li><NavLink to="/home" className={({ isActive }) => isActive ? "active" : ""}>Services</NavLink></li>
-<li><NavLink to="/bills" className={({ isActive }) => isActive ? "active" : ""}>Bill's</NavLink></li>
-<li><NavLink to="/profile" className={({ isActive }) => isActive ? "active" : ""}>Profile</NavLink></li>
+          <li><NavLink to="/home" className={ (({ isActive }) => isActive ? "active" : "")}>HOME</NavLink></li>
+      <li><NavLink to="/home" className={({ isActive }) => isActive ? "active" : ""}>SERVICES</NavLink></li>
+<li><NavLink to="/bills" className={({ isActive }) => isActive ? "active" : ""}>BILLS</NavLink></li>
+<li><NavLink to="/profile" className={({ isActive }) => isActive ? "active" : ""}>PROFILE</NavLink></li>
           </ul>
         </div>
         <div className="navbar-end">

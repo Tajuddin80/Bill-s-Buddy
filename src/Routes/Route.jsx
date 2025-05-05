@@ -22,19 +22,7 @@ export const router = createBrowserRouter([
         hydrateFallbackElement: <Loader></Loader>,
        element: <Landing></Landing>
       },
-      {
-        path: "/home",
-        Component: Home,
-      },
-     
-      {
-        path: "/bills",
-        Component: Bills,
-      },
-      {
-        path: "/profile",
-        Component: Profile,
-      },
+    
     ],
     
   },
@@ -45,5 +33,19 @@ export const router = createBrowserRouter([
   {
     path: "/signup",
     Component: SignUp,
+  },
+
+  {
+    path: "/home",
+    Component: Home,
+  },
+ 
+  {
+    path: "/bills",
+    Component: Bills,
+  },
+  {
+    path: "/profile",
+    Component: Profile,
   },
 ]);
