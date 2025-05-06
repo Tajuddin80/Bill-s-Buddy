@@ -78,6 +78,8 @@ const SignIn = () => {
             </div>
 
             <form className="space-y-4">
+        
+              {/* email */}
               <div>
                 <input
                   type="email"
@@ -87,7 +89,7 @@ const SignIn = () => {
                   required
                 />
               </div>
-
+{/* password */}
               <div>
                 <input
                   type="password"
@@ -98,29 +100,7 @@ const SignIn = () => {
                 />
               </div>
 
-              <div className="flex flex-col">
-                <div className="flex items-start">
-                  <input
-                    type="checkbox"
-                    name="agreeToTerms"
-                    id="agreeToTerms"
-                    className="mt-1 h-4 w-4 text-orange-500 focus:ring-orange-500 border-gray-300 rounded"
-                    required
-                  />
-                  <label
-                    htmlFor="agreeToTerms"
-                    className="ml-2 block text-sm text-gray-700"
-                  >
-                    I accept the{" "}
-                    <Link
-                      to=""
-                      className="text-orange-500 hover:text-orange-600"
-                    >
-                      Terms of Use
-                    </Link>
-                  </label>
-                </div>
-              </div>
+             
 
               <div>
                 <button
@@ -139,7 +119,8 @@ const SignIn = () => {
           </div>
         </div>
 
-        <div className=" right-0 bottom-0 hidden md:fixed">
+        <div className=" right-0 bottom-0 hidden lg:block fixed
+          ">
           <img src={mascot2} alt="" />
         </div>
       </div>

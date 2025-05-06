@@ -59,8 +59,8 @@ const SignUp = () => {
                 <div>
                   <input
                     type="text"
-                    name="fullName"
-                    placeholder="Full Name"
+                    name="username"
+                    placeholder="User Name"
                     className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-orange-500"
                     required
                   />
@@ -130,7 +130,8 @@ const SignUp = () => {
 
        
 
-          <div className=" right-0 bottom-0 hidden md:fixed">
+          <div className=" right-0 bottom-0 hidden lg:block fixed
+          ">
           <img src={mascot} alt="" />
           </div>
         </div>

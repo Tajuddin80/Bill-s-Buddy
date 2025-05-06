@@ -1,10 +1,13 @@
 import React from "react";
+import google from "../../../src/assets/playstore.png";
+import appstore from "../../../src/assets/appstore.png";
+import heroImg from "../../../src/assets/background-1.svg";
 import CountUp from "react-countup";
-import ImageSwiper from '../../components/ImageSwiper/ImageSwiper';
-import { useLoaderData } from 'react-router';
+import ImageSwiper from "../../components/ImageSwiper/ImageSwiper";
+import { useLoaderData } from "react-router";
 import { Typewriter } from "react-simple-typewriter";
 const Landing = () => {
-  const data = useLoaderData()
+  const data = useLoaderData();
   return (
     <div className="flex-col flex justify-center items-center mt-20 space-y-10">
       <h1 className=" text-[4.5rem] font-bold ">
@@ -16,7 +19,18 @@ const Landing = () => {
           style={{ color: "#ff5c15", fontWeight: "bold", fontSize: "3rem" }}
         >
           <Typewriter
-            words={["Data", "Gas", "Electricity", "Water", "Airtime"]}
+            words={[
+              "Pay-Airtime",
+              "Pay-Data",
+              "Pay-TV-Subscription",
+              "Pay-Electricity-Token",
+              "Pay-Gas",
+              "Annual-Taxes",
+              "Vehicle-Registration",
+              "Medical-Bills",
+              "Tuition",
+              "Mobile-Phone",
+            ]}
             loop={0}
             cursor
             cursorStyle="|"
@@ -35,14 +49,14 @@ const Landing = () => {
       </div>
       <div className="flex gap-4 mt-3">
         <div>
-          <img src="../../../src/assets/playstore.png" alt="" />
+          <img src={google} alt="" />
         </div>
         <div>
-          <img src="../../../src/assets/appstore.png" alt="" />
+          <img src={appstore} alt="" />
         </div>
       </div>
       <div className=" text-center ">
-        <img src="../../../src/assets/background-1.svg" alt="" />
+        <img src={heroImg} alt="" />
       </div>
       <div className="flex flex-col gap-3 my-20">
         <h3 className="text-[#ff5c15] text-[3rem] font-normal">
@@ -80,21 +94,22 @@ const Landing = () => {
 
       {/* Image Swiper */}
 
-      <div className='mt-20 w-11/12 mx-auto'>
-            <ImageSwiper data={data}></ImageSwiper>
-        </div>
+      <div className="mt-20 w-11/12 mx-auto">
+        <ImageSwiper data={data}></ImageSwiper>
+      </div>
 
-        {/* Frequently Asked Questions */}
+      {/* Frequently Asked Questions */}
       <div className="my-20">
         <h3 className="text-center mb-3">
           <span className="text-[3rem] font-bold  text-[#ff5c15]">
             Frequently Asked Questions
           </span>
-          <span className="text-[3rem] font-bold">(FAQs) </span>
+          <span className="text-[3rem] font-bold"> (FAQs) </span>
         </h3>
         <h5 className="text-2xl text-center">
           Need further support, kindly contact our
-          <span className="  text-[#ff5c15]">support</span> team for assistance.
+          <span className="  text-[#ff5c15]"> support</span> team for
+          assistance.
         </h5>
 
         <div className=" w-11/12 mx-auto mt-25">
