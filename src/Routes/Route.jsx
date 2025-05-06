@@ -1,4 +1,3 @@
-
 import { createBrowserRouter } from "react-router";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import Home from "../Pages/Home/Home";
@@ -18,13 +17,11 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
-        loader: ()=> fetch('/slider.json'),
+        loader: () => fetch("/slider.json"),
         hydrateFallbackElement: <Loader></Loader>,
-       element: <Landing></Landing>
+        element: <Landing></Landing>,
       },
-    
     ],
-    
   },
   {
     path: "/signin",
@@ -38,11 +35,17 @@ export const router = createBrowserRouter([
   {
     path: "/home",
     Component: Home,
-  },
- 
-  {
-    path: "/bills",
-    Component: Bills,
+    // hydrateFallbackElement: <Loader></Loader>,
+    children: [
+      {
+        path: "/home/:dynamic",
+        Component: Bills,
+        hydrateFallbackElement: <Loader></Loader>,
+        loader: () => fetch("/bills.json"),
+      },
+      
+    ],
+
   },
   {
     path: "/profile",

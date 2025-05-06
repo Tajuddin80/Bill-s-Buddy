@@ -8,7 +8,7 @@ const Navbar = () => {
 <li><NavLink to="/home" className={(({ isActive }) => isActive ? "active" : "")}>HOME</NavLink></li>
 <li><NavLink to="/home" className={({ isActive }) => isActive ? "active" : ""}>SERVICES</NavLink></li>
 <li><NavLink to="/bills" className={({ isActive }) => isActive ? "active" : ""}>BILL</NavLink></li>
-<li><NavLink to="/profile" className={({ isActive }) => isActive ? "active" : ""}>PROFILE</NavLink></li>
+
     </>
     return (
         <div className="navbar shadow-sm w-11/12 rounded-2xl mt-5 bg-orange-50 mx-auto">
@@ -30,7 +30,7 @@ const Navbar = () => {
           <li><NavLink to="/home" className={ (({ isActive }) => isActive ? "active" : "")}>HOME</NavLink></li>
       <li><NavLink to="/home" className={({ isActive }) => isActive ? "active" : ""}>SERVICES</NavLink></li>
 <li><NavLink to="/bills" className={({ isActive }) => isActive ? "active" : ""}>BILLS</NavLink></li>
-<li><NavLink to="/profile" className={({ isActive }) => isActive ? "active" : ""}>PROFILE</NavLink></li>
+
           </ul>
         </div>
         <div className="navbar-end">
@@ -56,3 +56,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+// https://i.postimg.cc/5HsfHKvM/receipts.png

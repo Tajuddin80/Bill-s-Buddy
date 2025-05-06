@@ -2,411 +2,401 @@
   {
     "id": 1,
     "bill_type": "Pay-Airtime",
-    "icon": "https://i.ibb.co.com/CKJ90M2Y/iub.png",
+    "icon": "https://i.postimg.cc/YG6mRMYp/gp.jpg",
     "organization": "Grameenphone",
     "amount": 300,
-    "due-date": "2025-06-01T10:00:00.000Z"
+    "due_date": "2025-06-01T10:00:00.000Z"
   },
   {
     "id": 2,
     "bill_type": "Pay-Airtime",
-    "icon": "https://i.ibb.co.com/cK8c8VYC/robi.jpg",
+    "icon": "https://i.postimg.cc/r0Xr5Kdn/robi.jpg",
     "organization": "Robi",
     "amount": 150,
-    "due-date": "2025-06-03T10:00:00.000Z"
+    "due_date": "2025-06-03T10:00:00.000Z"
   },
   {
     "id": 3,
     "bill_type": "Pay-Airtime",
-    "icon": "https://i.ibb.co.com/PZLLhyd2/bl.png",
+    "icon": "https://i.postimg.cc/94q94Gfw/bl.png",
     "organization": "Banglalink",
     "amount": 250,
-    "due-date": "2025-06-07T10:00:00.000Z"
+    "due_date": "2025-06-07T10:00:00.000Z"
   },
   {
     "id": 4,
     "bill_type": "Pay-Airtime",
-    "icon": "https://i.ibb.co.com/DfzR1byN/teletalk.jpg",
+    "icon": "https://i.postimg.cc/18XwSxhH/teletalk.jpg",
     "organization": "Teletalk",
     "amount": 200,
-    "due-date": "2025-06-09T10:00:00.000Z"
+    "due_date": "2025-06-09T10:00:00.000Z"
   },
   {
     "id": 5,
     "bill_type": "Pay-Airtime",
-    "icon": "https://i.ibb.co.com/mCcr8tS8/airtel.jpg",
+    "icon": "https://i.postimg.cc/JsFJ4TRW/airtel.jpg",
     "organization": "Airtel",
     "amount": 180,
-    "due-date": "2025-06-11T10:00:00.000Z"
+    "due_date": "2025-06-11T10:00:00.000Z"
   },
   {
     "id": 6,
     "bill_type": "Pay-Data",
-    "icon": "https://i.ibb.co.com/CKJ90M2Y/iub.png",
+    "icon": "https://i.postimg.cc/YG6mRMYp/gp.jpg",
     "organization": "Grameenphone",
     "amount": 500,
-    "due-date": "2025-06-02T08:00:00.000Z"
+    "due_date": "2025-06-02T08:00:00.000Z"
   },
   {
     "id": 7,
     "bill_type": "Pay-Data",
-    "icon": "https://i.ibb.co.com/cK8c8VYC/robi.jpg",
+    "icon": "https://i.postimg.cc/r0Xr5Kdn/robi.jpg",
     "organization": "Robi",
     "amount": 300,
-    "due-date": "2025-06-05T08:00:00.000Z"
+    "due_date": "2025-06-05T08:00:00.000Z"
   },
   {
     "id": 8,
     "bill_type": "Pay-Data",
-    "icon": "https://i.ibb.co.com/PZLLhyd2/bl.png",
+    "icon": "https://i.postimg.cc/94q94Gfw/bl.png",
     "organization": "Banglalink",
     "amount": 450,
-    "due-date": "2025-06-10T08:00:00.000Z"
+    "due_date": "2025-06-10T08:00:00.000Z"
   },
   {
     "id": 9,
     "bill_type": "Pay-Data",
-    "icon": "https://i.ibb.co.com/mCcr8tS8/airtel.jpg",
+    "icon": "https://i.postimg.cc/JsFJ4TRW/airtel.jpg",
     "organization": "Airtel",
     "amount": 400,
-    "due-date": "2025-06-12T08:00:00.000Z"
+    "due_date": "2025-06-12T08:00:00.000Z"
   },
   {
     "id": 10,
     "bill_type": "Pay-Data",
-    "icon": "https://i.ibb.co.com/DfzR1byN/teletalk.jpg",
+    "icon": "https://i.postimg.cc/18XwSxhH/teletalk.jpg",
     "organization": "Teletalk",
     "amount": 350,
-    "due-date": "2025-06-14T08:00:00.000Z"
+    "due_date": "2025-06-14T08:00:00.000Z"
   },
   {
     "id": 11,
     "bill_type": "Pay-TV-Subscription",
-    "icon": "https://i.ibb.co.com/7xj5Hvfh/akash-tv.png",
+    "icon": "https://i.postimg.cc/pyQDYYJD/akash-tv.png",
     "organization": "Dish Network",
-    "amount": 1200,
-    "due-date": "2025-06-03T12:00:00.000Z"
+    "amount": 120,
+    "due_date": "2025-06-03T12:00:00.000Z"
   },
   {
     "id": 12,
     "bill_type": "Pay-TV-Subscription",
-    "icon": "https://i.ibb.co.com/2YCxq0Tn/realvutv.jpg",
+    "icon": "https://i.postimg.cc/mhWYH6CL/realvutv.jpg",
     "organization": "SKY",
-    "amount": 1000,
-    "due-date": "2025-06-06T12:00:00.000Z"
+    "amount": 100,
+    "due_date": "2025-06-06T12:00:00.000Z"
   },
   {
     "id": 13,
     "bill_type": "Pay-TV-Subscription",
-    "icon": "https://i.ibb.co.com/fdSj464h/dishtv.jpg",
+    "icon": "https://i.postimg.cc/FkGvDL79/dishtv.jpg",
     "organization": "DStv",
     "amount": 850,
-    "due-date": "2025-06-08T12:00:00.000Z"
+    "due_date": "2025-06-08T12:00:00.000Z"
   },
   {
     "id": 14,
     "bill_type": "Pay-TV-Subscription",
-    "icon": "https://i.ibb.co.com/7xj5Hvfh/akash-tv.png",
+    "icon": "https://i.postimg.cc/pyQDYYJD/akash-tv.png",
     "organization": "Star TV",
     "amount": 950,
-    "due-date": "2025-06-11T12:00:00.000Z"
+    "due_date": "2025-06-11T12:00:00.000Z"
   },
   {
     "id": 15,
     "bill_type": "Pay-TV-Subscription",
-    "icon": "https://i.ibb.co.com/twDSFgbP/bengaltv.png",
+    "icon": "https://i.postimg.cc/ykV0fgL2/bengaltv.png",
     "organization": "Tata Sky",
-    "amount": 1100,
-    "due-date": "2025-06-13T12:00:00.000Z"
+    "amount": 110,
+    "due_date": "2025-06-13T12:00:00.000Z"
   },
   {
     "id": 16,
     "bill_type": "Pay-Electricity-Token",
-    "icon": "https://i.ibb.co.com/pBRmqtpb/desco.jpg",
+    "icon": "https://i.postimg.cc/k2Hn0KwG/desco.jpg",
     "organization": "DESCO",
-    "amount": 2000,
-    "due-date": "2025-06-04T09:00:00.000Z"
+    "amount": 200,
+    "due_date": "2025-06-04T09:00:00.000Z"
   },
   {
     "id": 17,
     "bill_type": "Pay-Electricity-Token",
-    "icon": "https://i.ibb.co.com/1Jfm83Kf/polli.jpg",
+    "icon": "https://i.postimg.cc/vgFGByJd/polli.jpg",
     "organization": "Palli Bidyut",
-    "amount": 1750,
-    "due-date": "2025-06-06T09:00:00.000Z"
+    "amount": 175,
+    "due_date": "2025-06-06T09:00:00.000Z"
   },
   {
     "id": 18,
     "bill_type": "Pay-Electricity-Token",
-    "icon": "https://i.ibb.co.com/HTXt82pN/wzpdcl.jpg",
+    "icon": "https://i.postimg.cc/Hcwd8Km8/wzpdcl.jpg",
     "organization": "WZPDCL",
-    "amount": 2200,
-    "due-date": "2025-06-08T09:00:00.000Z"
+    "amount": 220,
+    "due_date": "2025-06-08T09:00:00.000Z"
   },
   {
     "id": 19,
     "bill_type": "Pay-Electricity-Token",
-    "icon": "https://i.ibb.co.com/XrJdvR9p/dpdc.png",
+    "icon": "https://i.postimg.cc/XZyV4qD8/dpdc.png",
     "organization": "DPDC",
-    "amount": 1900,
-    "due-date": "2025-06-11T09:00:00.000Z"
+    "amount": 190,
+    "due_date": "2025-06-11T09:00:00.000Z"
   },
   {
     "id": 20,
     "bill_type": "Pay-Electricity-Token",
-    "icon": "https://i.ibb.co.com/Gf8QDJ1m/nesco.png",
+    "icon": "https://i.postimg.cc/V0z1qRsG/nesco.png",
     "organization": "BREB",
-    "amount": 2050,
-    "due-date": "2025-06-13T09:00:00.000Z"
+    "amount": 205,
+    "due_date": "2025-06-13T09:00:00.000Z"
   },
   {
     "id": 21,
     "bill_type": "Pay-Gas",
-    "icon": "https://i.ibb.co.com/mCQfsTYJ/titas.jpg",
+    "icon": "https://i.postimg.cc/K35GwWsh/titas.jpg",
     "organization": "Titas Gas",
-    "amount": 1488,
-    "due-date": "2025-06-01T07:00:00.000Z"
+    "amount": 148,
+    "due_date": "2025-06-01T07:00:00.000Z"
   },
   {
     "id": 22,
     "bill_type": "Pay-Gas",
-    "icon": "https://i.ibb.co.com/YFmL4VNg/bakhrabad.jpg",
+    "icon": "https://i.postimg.cc/dL4Q9zy8/bakhrabad.jpg",
     "organization": "Bakhrabad Gas",
-    "amount": 1600,
-    "due-date": "2025-06-04T07:00:00.000Z"
+    "amount": 160,
+    "due_date": "2025-06-04T07:00:00.000Z"
   },
   {
     "id": 23,
     "bill_type": "Pay-Gas",
-    "icon": "https://i.ibb.co.com/ymdZY5vc/jalalabad.png",
+    "icon": "https://i.postimg.cc/Rq1ZW3Cp/jalalabad.png",
     "organization": "Jalalabad Gas",
-    "amount": 1420,
-    "due-date": "2025-06-07T07:00:00.000Z"
+    "amount": 142,
+    "due_date": "2025-06-07T07:00:00.000Z"
   },
   {
     "id": 24,
     "bill_type": "Pay-Gas",
-    "icon": "https://i.ibb.co.com/8L3s9GM9/kornafuli.png",
+    "icon": "https://i.postimg.cc/TpRYgRpd/kornafuli.png",
     "organization": "Karnaphuli Gas",
-    "amount": 1530,
-    "due-date": "2025-06-09T07:00:00.000Z"
+    "amount": 153,
+    "due_date": "2025-06-09T07:00:00.000Z"
   },
   {
     "id": 25,
     "bill_type": "Pay-Gas",
-    "icon": "https://i.ibb.co.com/8DfkHy4M/sundarban.jpg",
+    "icon": "https://i.postimg.cc/NKFsCp6Z/sundarban.jpg",
     "organization": "PGCL",
-    "amount": 1700,
-    "due-date": "2025-06-12T07:00:00.000Z"
+    "amount": 170,
+    "due_date": "2025-06-12T07:00:00.000Z"
   },
   {
     "id": 26,
     "bill_type": "Annual-Taxes",
-    "icon": "https://i.ibb.co.com/Ckh9R46/nbrb.png",
+    "icon": "https://i.postimg.cc/sBB2xw15/nbrb.png",
     "organization": "National Board of Revenue",
-    "amount": 10000,
-    "due-date": "2025-12-31T15:00:00.000Z"
+    "amount": 999,
+    "due_date": "2025-12-31T15:00:00.000Z"
   },
   {
     "id": 27,
     "bill_type": "Annual-Taxes",
-    "icon": "https://i.ibb.co.com/PZB4D3BS/municioiity.png",
+    "icon": "https://i.postimg.cc/mc0gHCFJ/municioiity.png",
     "organization": "City Corporation",
-    "amount": 8500,
-    "due-date": "2025-11-30T15:00:00.000Z"
+    "amount": 850,
+    "due_date": "2025-11-30T15:00:00.000Z"
   },
   {
     "id": 28,
     "bill_type": "Annual-Taxes",
-    "icon": "https://i.ibb.co.com/q32jWYfR/vat.jpg",
+    "icon": "https://i.postimg.cc/KkBvrjPz/vat.jpg",
     "organization": "Income Tax Dept.",
-    "amount": 15000,
-    "due-date": "2025-12-25T15:00:00.000Z"
+    "amount": 999,
+    "due_date": "2025-12-25T15:00:00.000Z"
   },
   {
     "id": 29,
     "bill_type": "Annual-Taxes",
-    "icon": "https://i.ibb.co.com/PZB4D3BS/municioiity.png",
+    "icon": "https://i.postimg.cc/mc0gHCFJ/municioiity.png",
     "organization": "Local Govt.",
-    "amount": 9200,
-    "due-date": "2025-10-31T15:00:00.000Z"
+    "amount": 920,
+    "due_date": "2025-10-31T15:00:00.000Z"
   },
   {
     "id": 30,
     "bill_type": "Annual-Taxes",
-    "icon": "https://i.ibb.co.com/PZB4D3BS/municioiity.png",
+    "icon": "https://i.postimg.cc/mc0gHCFJ/municioiity.png",
     "organization": "Municipality Office",
-    "amount": 7800,
-    "due-date": "2025-09-30T15:00:00.000Z"
+    "amount": 780,
+    "due_date": "2025-09-30T15:00:00.000Z"
   },
   {
     "id": 31,
     "bill_type": "Vehicle-Registration",
-    "icon": "https://i.ibb.co.com/JRRqgyQ3/brtc.jpg",
+    "icon": "https://i.postimg.cc/4HG48GP1/brtc.jpg",
     "organization": "BRTA",
-    "amount": 2500,
-    "due-date": "2025-07-01T09:00:00.000Z"
+    "amount": 250,
+    "due_date": "2025-07-01T09:00:00.000Z"
   },
   {
     "id": 32,
     "bill_type": "Vehicle-Registration",
-    "icon": "https://i.ibb.co.com/JRRqgyQ3/brtc.jpg",
+    "icon": "https://i.postimg.cc/4HG48GP1/brtc.jpg",
     "organization": "Transport Dept.",
-    "amount": 2700,
-    "due-date": "2025-07-15T09:00:00.000Z"
+    "amount": 270,
+    "due_date": "2025-07-15T09:00:00.000Z"
   },
   {
     "id": 33,
     "bill_type": "Vehicle-Registration",
-    "icon": "https://i.ibb.co.com/JRRqgyQ3/brtc.jpg",
+    "icon": "https://i.postimg.cc/4HG48GP1/brtc.jpg",
     "organization": "Motor Vehicle Authority",
-    "amount": 3100,
-    "due-date": "2025-08-01T09:00:00.000Z"
+    "amount": 310,
+    "due_date": "2025-08-01T09:00:00.000Z"
   },
   {
     "id": 34,
     "bill_type": "Vehicle-Registration",
-    "icon": "https://i.ibb.co.com/JRRqgyQ3/brtc.jpg",
+    "icon": "https://i.postimg.cc/4HG48GP1/brtc.jpg",
     "organization": "RTO Office",
-    "amount": 2900,
-    "due-date": "2025-08-10T09:00:00.000Z"
+    "amount": 290,
+    "due_date": "2025-08-10T09:00:00.000Z"
   },
   {
     "id": 35,
     "bill_type": "Vehicle-Registration",
-    "icon": "https://i.ibb.co.com/JRRqgyQ3/brtc.jpg",
+    "icon": "https://i.postimg.cc/4HG48GP1/brtc.jpg",
     "organization": "City Transport Authority",
-    "amount": 3300,
-    "due-date": "2025-08-15T09:00:00.000Z"
+    "amount": 330,
+    "due_date": "2025-08-15T09:00:00.000Z"
   },
-
   {
     "id": 36,
     "bill_type": "Medical-Bills",
-    "icon": "https://i.ibb.co.com/8LrCCz8z/apollo.jpg",
+    "icon": "https://i.postimg.cc/SYLRqRR5/apollo.jpg",
     "organization": "Apollo Hospital",
-    "amount": 7000,
-    "due-date": "2025-06-02T14:00:00.000Z"
+    "amount": 700,
+    "due_date": "2025-06-02T14:00:00.000Z"
   },
   {
     "id": 37,
     "bill_type": "Medical-Bills",
-    "icon": "https://i.ibb.co.com/N24YtG4c/square.png",
+    "icon": "https://i.postimg.cc/MX1v1P5D/square.png",
     "organization": "Square Hospital",
-    "amount": 5600,
-    "due-date": "2025-06-04T14:00:00.000Z"
+    "amount": 560,
+    "due_date": "2025-06-04T14:00:00.000Z"
   },
   {
     "id": 38,
     "bill_type": "Medical-Bills",
-    "icon": "https://i.ibb.co.com/v4zCX8hZ/labaid.jpg",
+    "icon": "https://i.postimg.cc/mPgkfbsX/labaid.jpg",
     "organization": "Labaid",
-    "amount": 6100,
-    "due-date": "2025-06-06T14:00:00.000Z"
+    "amount": 610,
+    "due_date": "2025-06-06T14:00:00.000Z"
   },
   {
     "id": 39,
     "bill_type": "Medical-Bills",
-    "icon": "https://i.ibb.co.com/5Xg4LGmx/united-hos.jpg",
+    "icon": "https://i.postimg.cc/N5YLD6Pw/united-hos.jpg",
     "organization": "United Hospital",
-    "amount": 8000,
-    "due-date": "2025-06-08T14:00:00.000Z"
+    "amount": 800,
+    "due_date": "2025-06-08T14:00:00.000Z"
   },
   {
     "id": 40,
     "bill_type": "Medical-Bills",
-    "icon": "https://i.ibb.co.com/8LrCCz8z/apollo.jpg",
+    "icon": "https://i.postimg.cc/SYLRqRR5/apollo.jpg",
     "organization": "Popular Diagnostic",
-    "amount": 4900,
-    "due-date": "2025-06-10T14:00:00.000Z"
+    "amount": 490,
+    "due_date": "2025-06-10T14:00:00.000Z"
   },
   {
     "id": 41,
     "bill_type": "Tuition",
-    "icon": "https://i.ibb.co.com/s9mCqSTy/du.jpg",
+    "icon": "https://i.postimg.cc/McXnRz3M/du.jpg",
     "organization": "Dhaka University",
-    "amount": 15000,
-    "due-date": "2025-06-15T16:00:00.000Z"
+    "amount": 999,
+    "due_date": "2025-06-15T16:00:00.000Z"
   },
   {
     "id": 42,
     "bill_type": "Tuition",
-    "icon": "https://i.ibb.co.com/r2S4wpNT/nsu.jpg",
+    "icon": "https://i.postimg.cc/YGWjnbHt/nsu.jpg",
     "organization": "NSU",
-    "amount": 18500,
-    "due-date": "2025-06-17T16:00:00.000Z"
+    "amount": 999,
+    "due_date": "2025-06-17T16:00:00.000Z"
   },
   {
     "id": 43,
     "bill_type": "Tuition",
-    "icon": "https://i.ibb.co.com/tpF0TJSQ/gub.png",
+    "icon": "https://i.postimg.cc/hQRvHTDT/gub.png",
     "organization": "BRAC University",
-    "amount": 19000,
-    "due-date": "2025-06-19T16:00:00.000Z"
+    "amount": 999,
+    "due_date": "2025-06-19T16:00:00.000Z"
   },
   {
     "id": 44,
     "bill_type": "Tuition",
-    "icon": "https://i.ibb.co.com/CKJ90M2Y/iub.png",
+    "icon": "https://i.postimg.cc/jDMWLDcY/iub.png",
     "organization": "IUB",
-    "amount": 17000,
-    "due-date": "2025-06-21T16:00:00.000Z"
+    "amount": 999,
+    "due_date": "2025-06-21T16:00:00.000Z"
   },
   {
     "id": 45,
     "bill_type": "Tuition",
-    "icon": "https://i.ibb.co.com/kg42zvjz/buet.jpg",
+    "icon": "https://i.postimg.cc/4KMmQjj8/buet.jpg",
     "organization": "East West University",
-    "amount": 16000,
-    "due-date": "2025-06-23T16:00:00.000Z"
+    "amount": 999,
+    "due_date": "2025-06-23T16:00:00.000Z"
   },
   {
     "id": 46,
     "bill_type": "Mobile-Phone",
-    "icon": "https://i.ibb.co.com/CKJ90M2Y/iub.png",
+    "icon": "https://i.postimg.cc/YG6mRMYp/gp.jpg",
     "organization": "Grameenphone",
     "amount": 890,
-    "due-date": "2025-06-02T13:00:00.000Z"
+    "due_date": "2025-06-02T13:00:00.000Z"
   },
   {
     "id": 47,
     "bill_type": "Mobile-Phone",
-    "icon": "https://i.ibb.co.com/cK8c8VYC/robi.jpg",
+    "icon": "https://i.postimg.cc/r0Xr5Kdn/robi.jpg",
     "organization": "Robi",
     "amount": 950,
-    "due-date": "2025-06-05T13:00:00.000Z"
+    "due_date": "2025-06-05T13:00:00.000Z"
   },
   {
     "id": 48,
     "bill_type": "Mobile-Phone",
-    "icon": "https://i.ibb.co.com/PZLLhyd2/bl.png",
+    "icon": "https://i.postimg.cc/94q94Gfw/bl.png",
     "organization": "Banglalink",
     "amount": 920,
-    "due-date": "2025-06-08T13:00:00.000Z"
+    "due_date": "2025-06-08T13:00:00.000Z"
   },
   {
     "id": 49,
     "bill_type": "Mobile-Phone",
-    "icon": "https://i.ibb.co.com/mCcr8tS8/airtel.jpg",
+    "icon": "https://i.postimg.cc/JsFJ4TRW/airtel.jpg",
     "organization": "Airtel",
     "amount": 870,
-    "due-date": "2025-06-11T13:00:00.000Z"
+    "due_date": "2025-06-11T13:00:00.000Z"
   },
   {
     "id": 50,
     "bill_type": "Mobile-Phone",
-    "icon": "https://i.ibb.co.com/DfzR1byN/teletalk.jpg",
+    "icon": "https://i.postimg.cc/18XwSxhH/teletalk.jpg",
     "organization": "Teletalk",
     "amount": 880,
-    "due-date": "2025-06-14T13:00:00.000Z"
+    "due_date": "2025-06-14T13:00:00.000Z"
   }
 ]
-
-
-
-
-
-
-
-
-
