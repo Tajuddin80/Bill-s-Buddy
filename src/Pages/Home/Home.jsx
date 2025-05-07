@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { use, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Nothing from "../../assets/nothing.png";
@@ -6,8 +6,11 @@ import avatar from "../../assets/icons8-avatar.gif";
 import { NavLink, Outlet, useLocation } from "react-router";
 import "./Home.css";
 import "react-toastify/dist/ReactToastify.css";
+import { AuthContext } from "../../components/Contexts/AuthProvider";
 
 const Home = () => {
+  const { user } = use(AuthContext);
+
   const location = useLocation();
 
   const [paid, setPaid] = useState(() => {
@@ -82,16 +85,22 @@ const Home = () => {
         <div className="navbar mb-4">
           <div className="flex-1">
             <div className="flex flex-col">
-              <p className="text-3xl font-bold">Hello User,</p>
+              <p className="text-3xl font-bold">
+                Hello, {user ? user?.name : ""}
+              </p>
               <p className="text-xl">
                 Good Evening, Embrace the day with enthusiasm and purpose! 😁
               </p>
             </div>
           </div>
           <div className="flex-none">
-            {/* Wallet icon */}
+            {/* bell icon */}
             <div className="dropdown dropdown-end">
-              <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
+              <div
+                tabIndex={0}
+                role="button"
+                className="btn btn-ghost btn-circle"
+              >
                 <div className="indicator">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -112,7 +121,9 @@ const Home = () => {
                     <path d="M6 12h.01" />
                     <circle cx="12" cy="12" r="2" />
                   </svg>
-                  <span className="badge badge-sm indicator-item">{paidCount}</span>
+                  <span className="badge badge-sm indicator-item">
+                    {paidCount}
+                  </span>
                 </div>
               </div>
               <div
@@ -123,7 +134,9 @@ const Home = () => {
                   <span className="text-lg font-bold">{paidCount} Items</span>
                   <span className="text-info">Subtotal: ${paid}</span>
                   <div className="card-actions">
-                    <button className="btn btn-primary btn-block">View cart</button>
+                    <button className="btn btn-primary btn-block">
+                      View cart
+                    </button>
                   </div>
                 </div>
               </div>
@@ -165,21 +178,23 @@ const Home = () => {
             <span>$</span>
             <span id="available-balance">{available}</span>
           </div>
-             <ToastContainer
-                      position="top-right"
-                      autoClose={3000}
-                      hideProgressBar={false}
-                      newestOnTop={false}
-                      closeOnClick
-                      rtl={false}
-                      pauseOnFocusLoss
-                      draggable
-                      pauseOnHover
-                    />
-          <button onClick={()=> {
-            toast("Functionality is not added yet.")
-
-          }} className="btn bg-orange-500 text-white border-0 rounded-md p-3 absolute top-[35%] right-[5%] cursor-pointer">
+          <ToastContainer
+            position="top-right"
+            autoClose={3000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+          />
+          <button
+            onClick={() => {
+              toast("Functionality is not added yet.");
+            }}
+            className="btn bg-orange-500 text-white border-0 rounded-md p-3 absolute top-[35%] right-[5%] cursor-pointer"
+          >
             Fund wallet
           </button>
         </div>
