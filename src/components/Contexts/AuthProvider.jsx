@@ -77,6 +77,9 @@ const signInWithGoogle = () => {
   return signInWithPopup(auth, provider); 
 };
 
+
+
+
 // reset email 
 const sendResetPass =(email)=>{
 
