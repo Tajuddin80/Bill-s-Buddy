@@ -1,10 +1,11 @@
-
 import React from "react";
 import { Link } from "react-router";
-import ErrorPng from '../../assets/404.webp'
+import ErrorPng from "../../assets/404.webp";
+import { Helmet } from "react-helmet-async";
 const ErrorPage = () => {
   return (
     <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+       <Helmet><title>Bill's Buddy | Error Page</title></Helmet>
       <div className="max-w-screen-sm sm:text-center sm:mx-auto">
         <Link
           to="/"
@@ -28,11 +29,7 @@ const ErrorPage = () => {
           </div>
         </Link>
         <h2 className="mb-4 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
-          <img
-            className="rounded-lg"
-            src={ErrorPng}
-            alt="404"
-          />
+          <img className="rounded-lg" src={ErrorPng} alt="404" />
         </h2>
         <p className="text-base text-gray-700 md:text-lg sm:px-4 text-center">
           <Link

@@ -8,6 +8,7 @@ import "./Home.css";
 import "react-toastify/dist/ReactToastify.css";
 import FooterMain from "../../components/Footer/FooterMain";
 import { AuthContext } from "../../components/Contexts/AuthContext";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
   const { user, handleLogOut, name, photo } = use(AuthContext);
@@ -43,10 +44,13 @@ const Home = () => {
 
   return (
     <>
-      <div className="flex h-auto">
+     <Helmet><title>Bill's Buddy | Home</title></Helmet>
+      <div className="flex h-auto flex-col-reverse md:flex-row ">
         {/* Sidebar */}
-        <div className="w-[20%] min-h-screen bg-orange-600 text-white flex flex-col p-4 rounded-xl">
-          <div className="text-4xl font-bold mb-8">Bill's Buddy</div>
+        <div className="md:w-[20%] w-[100%] min-h-screen bg-orange-600 text-white flex flex-col p-4 rounded-xl">
+          <div className="text-2xl md:text-4xl font-bold mb-8">
+            Bill's Buddy
+          </div>
           <ul className="space-y-2 w-full">
             {[
               "Pay-Airtime",
@@ -87,7 +91,7 @@ const Home = () => {
               Account
             </NavLink>
             <NavLink
-            id="logout-btn"
+              id="logout-btn"
               onClick={handleLogOut}
               to="/signin"
               className={({ isActive }) =>
@@ -102,14 +106,14 @@ const Home = () => {
         </div>
 
         {/* Main Content */}
-        <main className="w-[80%] h-full bg-white p-6">
+        <main className="md:w-[80%] w-full h-full bg-white p-6">
           <div className="navbar mb-4">
             <div className="flex-1">
               <div className="flex flex-col">
-                <p className="text-3xl font-bold">
+                <p className="text-2xl md:text-3xl lg:text-4xl font-bold ">
                   Hello, {user ? name : "Buddy"}
                 </p>
-                <p className="text-xl">
+                <p className="md:text-2xl text-l">
                   Good Evening, Embrace the day with enthusiasm and purpose! 😁
                 </p>
               </div>
@@ -206,7 +210,9 @@ const Home = () => {
 
           {/* Wallet Card */}
           <div className="bg-black text-white p-8 rounded-xl w-full relative space-y-3">
-            <div className="text-4xl">Wallet Balance</div>
+            <div className="lg:text-4xl md:text-3xl text-2xl">
+              Wallet Balance
+            </div>
             <div className="text-3xl mt-2 btn">
               <span>$</span>
               <span id="available-balance">{available}</span>
@@ -226,7 +232,7 @@ const Home = () => {
               onClick={() => {
                 toast("Functionality is not added yet.");
               }}
-              className="btn bg-[#ff5c15] text-white border-0 rounded-md p-3 absolute top-[35%] right-[5%] cursor-pointer"
+              className="btn bg-[#ff5c15] text-white border-0 rounded-md p-3 absolute md:top-[35%] md:right-[5%] bottom-0 right-0 cursor-pointer "
             >
               Fund wallet
             </button>

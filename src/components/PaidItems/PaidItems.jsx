@@ -19,7 +19,7 @@ const PaidItems = () => {
         setLoading(false);
       })
       .catch((err) => {
-        console.error('Failed to fetch bills:', err);
+        // console.error('Failed to fetch bills:', err);
         setLoading(false);
       });
   }, []);

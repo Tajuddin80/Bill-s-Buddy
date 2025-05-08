@@ -1,14 +1,14 @@
 import React, { useContext, useState } from "react";
-import { Link, useNavigate } from "react-router"; 
+import { Link, useNavigate } from "react-router";
 import mascot from "../../assets/bill_buddy_mascot-1.png";
 import { AuthContext } from "../../components/Contexts/AuthContext";
+import { Helmet } from "react-helmet-async";
 
 const SignUp = () => {
   const { createUser, setUser, setName, setPhoto, signInWithGoogle } =
-    useContext(AuthContext); 
+    useContext(AuthContext);
   const navigate = useNavigate();
   const [error, setError] = useState("");
-
 
   const validateEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   const validatePassword = (password) =>
@@ -55,7 +55,7 @@ const SignUp = () => {
         navigate("/home");
       })
       .catch((err) => {
-        console.error("Signup error:", err.message);
+       
         setError(err.message);
       });
   };
@@ -65,27 +65,28 @@ const SignUp = () => {
       .then((result) => {
         const user = result.user;
         setUser(user);
-  
+
         const displayName = user.displayName || "";
-        const photoURL = user.photoURL || "https://i.postimg.cc/QM6LPFwV/icons8-avatar.gif";
-  
-        setName(displayName);           
-        setPhoto(photoURL);            
-  
+        const photoURL =
+          user.photoURL || "https://i.postimg.cc/QM6LPFwV/icons8-avatar.gif";
+
+        setName(displayName);
+        setPhoto(photoURL);
+
         localStorage.setItem("userName", displayName);
         localStorage.setItem("userPhoto", photoURL);
-  
+
         navigate("/home");
       })
       .catch((err) => {
-        console.error("Google Sign-In Error:", err.message);
+        
         setError(err.message);
       });
   };
-  
 
   return (
     <div className="w-11/12 min-h-screen mx-auto py-8 flex flex-col justify-center items-center">
+       <Helmet><title>Bill's Buddy | Sign up</title></Helmet>
       <h3 className="text-center text-[3rem] font-bold text-[#ff5c15] my-10">
         Bill Buddy
       </h3>
@@ -214,13 +215,15 @@ const SignUp = () => {
                 Create Account
               </button>
             </form>
-
-            <Link
-              to="/signin"
-              className="mt-4 inline-block text-[#ff5c15] underline"
-            >
-              Already have an account? Login
-            </Link>
+            <div>
+              <span>Already have an account?</span>
+              <Link
+                to="/signin"
+                className="mt-4 ml-1 inline-block text-[#ff5c15] underline"
+              >
+                Login
+              </Link>
+            </div>
           </div>
         </div>
 

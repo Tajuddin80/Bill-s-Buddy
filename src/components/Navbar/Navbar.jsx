@@ -28,7 +28,7 @@ const {user, handleLogOut, photo } = useContext(AuthContext)
          {links}
             </ul>
           </div>
-          <Link className="font-bold text-[#ff5c15] text-[2.7rem]"> Bill's Buddy </Link>
+          <Link className="font-bold hidden md:block text-[#ff5c15] text-[1.5rem] md:text-[2.7rem]"> Bill's Buddy </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 flex gap-3">
@@ -44,11 +44,12 @@ const {user, handleLogOut, photo } = useContext(AuthContext)
   user ? 
   <div className='flex gap-4'>
   
-  <img className="w-12 rounded-full" src={photo} alt="User Avatar" />
+  <img className="w-10  md:w-12 rounded-full" src={photo} alt="User Avatar" />
 
 
 
- <div>
+ <div className=''
+>
  <Link to='/' onClick={handleLogOut} className="relative inline-flex items-center justify-start px-6 py-3 overflow-hidden font-medium transition-all bg-red-500 rounded-xl group">
                <span className="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-red-700 rounded group-hover:-mr-4 group-hover:-mt-4">
                    <span className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
@@ -64,7 +65,8 @@ const {user, handleLogOut, photo } = useContext(AuthContext)
 
 : 
 
-<div> <Link to='/signin' className="mr-5 relative inline-flex items-center justify-start px-6 py-3 overflow-hidden font-medium transition-all bg-red-500 rounded-xl group">
+<div className='flex flex-row'> 
+  <Link to='/signin' className="mr-5 relative inline-flex items-center justify-start px-6 py-3 overflow-hidden font-medium transition-all bg-red-500 rounded-xl group">
   <span className="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-red-700 rounded group-hover:-mr-4 group-hover:-mt-4">
       <span className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
   </span>

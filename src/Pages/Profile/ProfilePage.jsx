@@ -2,6 +2,7 @@ import React, { useState, useContext, useEffect } from "react";
 import { AuthContext } from "../../components/Contexts/AuthContext";
 import { Link } from "react-router";
 import { toast, ToastContainer } from "react-toastify";
+import { Helmet } from "react-helmet-async";
 
 const ProfilePage = () => {
   const { user, setName, setPhoto } = useContext(AuthContext);
@@ -9,12 +10,15 @@ const ProfilePage = () => {
   const [photoUrl, setPhotoUrl] = useState("");
 
   useEffect(() => {
-    // Load saved data from localStorage or fall back to user info
     const savedName = localStorage.getItem("userName");
     const savedPhoto = localStorage.getItem("userPhoto");
 
     setNameInput(savedName || user?.displayName || "Buddy");
-    setPhotoUrl(savedPhoto || user?.photoURL || "https://i.postimg.cc/QM6LPFwV/icons8-avatar.gif");
+    setPhotoUrl(
+      savedPhoto ||
+        user?.photoURL ||
+        "https://i.postimg.cc/QM6LPFwV/icons8-avatar.gif"
+    );
   }, [user]);
 
   const handleSubmit = (e) => {
@@ -26,12 +30,15 @@ const ProfilePage = () => {
     localStorage.setItem("userName", name);
     localStorage.setItem("userPhoto", photoUrl);
 
-   toast("Profile updated successfully!");
+    toast("Profile updated successfully!");
   };
 
   return (
     <div className="max-w-xl mx-auto p-6 mt-10 bg-white rounded-md shadow-md">
-      <h2 className="text-2xl font-semibold text-orange-600 text-center mb-6">Edit Profile</h2>
+       <Helmet><title>Bill's Buddy | Profile Page</title></Helmet>
+      <h2 className="text-2xl font-semibold text-orange-600 text-center mb-6">
+        Edit Profile
+      </h2>
       <form onSubmit={handleSubmit} className="space-y-6">
         <div className="flex flex-col items-center">
           <img
@@ -41,16 +48,16 @@ const ProfilePage = () => {
           />
         </div>
         <ToastContainer
-            position="top-right"
-            autoClose={3000}
-            hideProgressBar={false}
-            newestOnTop={false}
-            closeOnClick
-            rtl={false}
-            pauseOnFocusLoss
-            draggable
-            pauseOnHover
-          />
+          position="top-right"
+          autoClose={3000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+        />
         <div>
           <label className="block mb-1 font-medium text-gray-700">Name</label>
           <input
@@ -63,7 +70,9 @@ const ProfilePage = () => {
         </div>
 
         <div>
-          <label className="block mb-1 font-medium text-gray-700">Image URL</label>
+          <label className="block mb-1 font-medium text-gray-700">
+            Image URL
+          </label>
           <input
             type="url"
             value={photoUrl}
@@ -84,13 +93,14 @@ const ProfilePage = () => {
         </div>
       </form>
       <div className="text-center mt-5">
-          <Link to='/home'
-            type=""
-            className="bg-orange-500 text-white px-6 py-2 rounded hover:bg-orange-600 transition"
-          >
-            Go to Home
-          </Link>
-        </div>
+        <Link
+          to="/home"
+          type=""
+          className="bg-orange-500 text-white px-6 py-2 rounded hover:bg-orange-600 transition"
+        >
+          Go to Home
+        </Link>
+      </div>
     </div>
   );
 };

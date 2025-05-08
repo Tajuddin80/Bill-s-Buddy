@@ -10,12 +10,12 @@ const Landing = () => {
   const data = useLoaderData();
   return (
     <div className="flex-col flex justify-center items-center mt-20 space-y-10">
-      <h1 className=" text-[4.5rem] font-bold ">
+      <h1 className=" md:text-[3.5rem] lg:text-[4.5rem] text-[3rem] text-center font-bold ">
         {" "}
         Discover more ways to manage your
       </h1>
       <div>
-        <span
+        <span className="font-[2rem]"
           style={{ color: "#ff5c15", fontWeight: "bold", fontSize: "3rem" }}
         >
           <Typewriter
@@ -41,13 +41,13 @@ const Landing = () => {
         </span>
       </div>
       <div>
-        <h4 className="text-2xl text-center">
+        <h4 className="md:text-2xl text-xl text-center px-2">
           Bill Buddy is your all-in-one bill management solution. Effortlessly
           handle subscriptions and <br /> automate payments, all while gaining
           valuable insights into your spending habits.
         </h4>
       </div>
-      <div className="flex gap-4 mt-3">
+      <div className="flex justify-center flex-wrap gap-4 mt-3">
         <div>
           <img src={google} alt="" />
         </div>
@@ -55,14 +55,14 @@ const Landing = () => {
           <img src={appstore} alt="" />
         </div>
       </div>
-      <div className=" text-center ">
+      <div className=" text-center mx-4 md:mx-auto">
         <img src={heroImg} alt="" />
       </div>
       <div className="flex flex-col gap-3 my-20">
-        <h3 className="text-[#ff5c15] text-[3rem] font-normal">
+        <h3 className="text-[#ff5c15] text-[3rem] font-normal mx-5 text-center">
           Simplify Your Bills, Amplify Your Life
         </h3>
-        <h5 className="text-2xl text-center">
+        <h5 className="mx-5 text-2xl text-center">
           Simplify your bills and join the amplified life. Be part of those who
           took <br /> a step back and let Bill Buddy do all their bill
           managements.
@@ -71,7 +71,7 @@ const Landing = () => {
 
       {/* count up  */}
 
-      <div className="stats-container flex  gap-20">
+      <div className="stats-container flex  gap-20 flex-wrap justify-center">
         <div className="stat-box">
           <h2 className="text-[#ff5c15] text-5xl font-extrabold">
             <CountUp end={500} duration={20} />+
@@ -94,17 +94,17 @@ const Landing = () => {
 
       {/* Image Swiper */}
 
-      <div className="mt-20 w-11/12 mx-auto">
+      <div className="mt-20 w-11/12 mx-auto ">
         <ImageSwiper data={data}></ImageSwiper>
       </div>
 
       {/* Frequently Asked Questions */}
       <div className="my-20">
         <h3 className="text-center mb-3">
-          <span className="text-[3rem] font-bold  text-[#ff5c15]">
+          <span className="md:text-[3rem] text-[2rem] font-bold  text-[#ff5c15]">
             Frequently Asked Questions
           </span>
-          <span className="text-[3rem] font-bold"> (FAQs) </span>
+          <span className="md:text-[3rem] text-[2rem] font-bold"> (FAQs) </span>
         </h3>
         <h5 className="text-2xl text-center">
           Need further support, kindly contact our
