@@ -3,6 +3,7 @@ import { Link, useNavigate, useLocation } from "react-router";
 import mascot2 from "../../assets/bill_buddy_mascot-2.png";
 import { AuthContext } from "../../components/Contexts/AuthContext";
 import { Helmet } from "react-helmet-async";
+import { toast, ToastContainer } from "react-toastify";
 
 const SignIn = () => {
   const {
@@ -42,13 +43,13 @@ const SignIn = () => {
   const handleForgetPassword = () => {
     const email = emailRef.current?.value;
     if (!email) {
-      alert("Please enter your email address first.");
+      toast("Please enter your email address first.");
       return;
     }
 
     sendResetPass(email)
       .then(() => {
-        alert("Password reset email sent!");
+        toast("Password reset email sent!");
       })
       .catch((error) => {
         console.error("Error sending password reset email:", error.message);
@@ -85,7 +86,17 @@ const SignIn = () => {
       <h3 className="text-center text-[3rem] font-bold text-[#ff5c15] my-10">
         Bill Buddy
       </h3>
-
+      <ToastContainer
+              position="top-right"
+              autoClose={3000}
+              hideProgressBar={false}
+              newestOnTop={false}
+              closeOnClick
+              rtl={false}
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
+            />
       <div className="border-t border-gray-200 pt-8">
         <div className="flex flex-col items-center">
           <div className="text-center mb-8">
@@ -208,8 +219,9 @@ const SignIn = () => {
             {error && (
               <p className="text-red-600 font-medium text-center mt-2">
                 {error}
-              </p>
-            )}
+              </p> )
+            }
+        
           </div>
         </div>
 
