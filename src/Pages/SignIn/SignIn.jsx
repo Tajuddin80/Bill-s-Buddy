@@ -1,17 +1,43 @@
-import React from "react";
-import { Link } from "react-router";
+import React, { useContext, useState } from "react";
+import { Link, useNavigate, useLocation } from "react-router"; // ✅ useLocation added
 import mascot2 from "../../assets/bill_buddy_mascot-2.png";
+import { AuthContext } from "../../components/Contexts/AuthContext";
+
 const SignIn = () => {
+  const { signInUser } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const location = useLocation(); // ✅ Get current location
+  const from = location.state?.from?.pathname || "/home"; // ✅ Fallback to /home
+
+  const [error, setError] = useState("");
+
+  const handleSignInUser = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const email = form.email.value;
+    const password = form.password.value;
+    setError("");
+
+    signInUser(email, password)
+      .then((result) => {
+        const user = result.user;
+        if (user) {
+          navigate(from, { replace: true }); // ✅ Redirect to previous page
+        }
+      })
+      .catch(() => {
+        setError("Login failed: Invalid information");
+      });
+  };
+
   return (
-    <div className="w-11/12 h-screen mx-auto py-8  flex flex-col justify-center items-center ">
-      <h3 className=" text-center text-[3rem] font-bold text-[#ff5c15] my-10">
+    <div className="w-11/12 min-h-screen mx-auto py-8 flex flex-col justify-center items-center">
+      <h3 className="text-center text-[3rem] font-bold text-[#ff5c15] my-10">
         Bill Buddy
       </h3>
 
-      {/* Main content */}
-      <div className="border-t border-gray-200 pt-8 ">
-        {/* Form section - takes 3 columns on large screens */}
-        <div className=" flex flex-col items-center">
+      <div className="border-t border-gray-200 pt-8">
+        <div className="flex flex-col items-center">
           <div className="text-center mb-8">
             <h1 className="text-4xl font-bold mb-2">
               <span className="text-gray-900">Your </span>
@@ -27,7 +53,7 @@ const SignIn = () => {
             </p>
           </div>
 
-          <div className="w-full max-w-md ">
+          <div className="w-full max-w-md">
             <div className="text-center mb-6">
               <h2 className="text-3xl font-bold text-gray-900">
                 Welcome Back Buddy!
@@ -38,7 +64,7 @@ const SignIn = () => {
             </div>
 
             <div>
-              {/* Google */}
+              {/* Google sign-in button (not wired yet) */}
               <button className="btn bg-white text-black border-[#e5e5e5] w-full">
                 <svg
                   aria-label="Google logo"
@@ -77,9 +103,8 @@ const SignIn = () => {
               <div className="flex-grow border-t border-gray-300"></div>
             </div>
 
-            <form className="space-y-4">
-        
-              {/* email */}
+            <form onSubmit={handleSignInUser} className="space-y-4">
+              {/* Email */}
               <div>
                 <input
                   type="email"
@@ -89,7 +114,8 @@ const SignIn = () => {
                   required
                 />
               </div>
-{/* password */}
+
+              {/* Password */}
               <div>
                 <input
                   type="password"
@@ -100,8 +126,6 @@ const SignIn = () => {
                 />
               </div>
 
-             
-
               <div>
                 <button
                   type="submit"
@@ -109,19 +133,24 @@ const SignIn = () => {
                 >
                   Sign In Your Account
                 </button>
-                <div className="my-4 text-center"></div>
               </div>
             </form>
-            <Link to="/signup" className="mb-10">
+
+            <Link to="/signup" className="mb-10 block text-center mt-4">
               Don't have an account?{" "}
-              <span className="text-[#ff5c15] underline">SignUp</span>{" "}
+              <span className="text-[#ff5c15] underline">Sign Up</span>
             </Link>
+
+            {error && (
+              <p className="text-red-600 font-medium text-center mt-2">
+                {error}
+              </p>
+            )}
           </div>
         </div>
 
-        <div className=" right-0 bottom-0 hidden lg:block fixed
-          ">
-          <img src={mascot2} alt="" />
+        <div className="right-0 bottom-0 hidden lg:block fixed">
+          <img src={mascot2} alt="Bill Buddy Mascot" />
         </div>
       </div>
     </div>

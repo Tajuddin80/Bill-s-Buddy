@@ -3,13 +3,15 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Nothing from "../../assets/nothing.png";
 import avatar from "../../assets/icons8-avatar.gif";
-import { NavLink, Outlet, useLocation } from "react-router";
+import { Link, NavLink, Outlet, useLocation } from "react-router";
 import "./Home.css";
 import "react-toastify/dist/ReactToastify.css";
-import { AuthContext } from "../../components/Contexts/AuthProvider";
+import FooterMain from "../../components/Footer/FooterMain"
+import { AuthContext } from "../../components/Contexts/AuthContext";
+
 
 const Home = () => {
-  const { user } = use(AuthContext);
+  const { user, handleLogOut, name, photo } = use(AuthContext);
 
   const location = useLocation();
 
@@ -40,7 +42,11 @@ const Home = () => {
   const initialBalance = 10000;
   const available = initialBalance - paid;
 
-  return (
+ 
+  
+
+  return (<>
+ 
     <div className="flex h-auto">
       {/* Sidebar */}
       <div className="w-[20%] min-h-screen bg-orange-600 text-white flex flex-col p-4 rounded-xl">
@@ -75,8 +81,28 @@ const Home = () => {
           ))}
         </ul>
         <div className="mt-auto space-y-4">
-          <div className="cursor-pointer hover:text-orange-200">Account</div>
-          <div className="cursor-pointer hover:text-orange-200">Logout</div>
+          <NavLink
+            className={({ isActive }) =>
+              `block px-4 py-2 rounded-md transition duration-200  ${
+                isActive ? "bg-white text-black underline" : "hover:underline"
+              }`
+            }
+          >
+            Account
+          </NavLink>
+          <NavLink
+         onClick={handleLogOut}
+             to="/signin"
+            className={({ isActive }) =>
+              `block px-4 py-2 rounded-md transition duration-200  ${
+                isActive ? "bg-white text-black underline" : "hover:underline"
+              }`
+            }
+             
+          >
+           Logout
+          </NavLink>
+       
         </div>
       </div>
 
@@ -86,7 +112,7 @@ const Home = () => {
           <div className="flex-1">
             <div className="flex flex-col">
               <p className="text-3xl font-bold">
-                Hello, {user ? user?.name : ""}
+                Hello, {user ? name : "Buddy"}
               </p>
               <p className="text-xl">
                 Good Evening, Embrace the day with enthusiasm and purpose! 😁
@@ -131,12 +157,15 @@ const Home = () => {
                 className="card card-compact dropdown-content bg-base-100 z-1 mt-3 w-52 shadow"
               >
                 <div className="card-body">
-                  <span className="text-lg font-bold">{paidCount} Items</span>
-                  <span className="text-info">Subtotal: ${paid}</span>
+                  <span className="text-lg font-bold"> Items Paid {paidCount}</span>
+                  <span className="text-info">Total bill paid: ${paid}</span>
                   <div className="card-actions">
-                    <button className="btn btn-primary btn-block">
-                      View cart
-                    </button>
+                    <Link
+                      to="/home/paid_items"
+                      className="btn bg-blue-700 text-white btn-block"
+                    >
+                      Paid Bill's
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -150,7 +179,12 @@ const Home = () => {
                 className="btn btn-ghost btn-circle avatar"
               >
                 <div className="w-10 rounded-full">
-                  <img alt="User Avatar" src={avatar} />
+                 
+    <img alt="User Avatar" src={user ? photo : avatar} /> 
+    
+
+        
+              
                 </div>
               </div>
               <ul
@@ -164,7 +198,9 @@ const Home = () => {
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/signin">Logout</NavLink>
+                  <NavLink onClick={handleLogOut} to="/signin">
+                    Logout
+                  </NavLink>
                 </li>
               </ul>
             </div>
@@ -199,17 +235,7 @@ const Home = () => {
           </button>
         </div>
 
-        {/* Tabs */}
-        <div className="hidden md:flex mt-6 gap-4">
-          {["Wallet", "Other Services", "Bill Management"].map((tab) => (
-            <div
-              key={tab}
-              className="bg-black flex-wrap md:flex-1 text-white px-4 py-2 rounded cursor-pointer"
-            >
-              {tab}
-            </div>
-          ))}
-        </div>
+      
 
         {/* Transactions Section */}
         <section className="my-3 p-4 rounded-xl h-auto">
@@ -232,6 +258,8 @@ const Home = () => {
       </main>
       <ToastContainer />
     </div>
+    <FooterMain></FooterMain>
+    </>
   );
 };
 
