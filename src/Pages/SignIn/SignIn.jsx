@@ -1,13 +1,13 @@
 import React, { useContext, useState } from "react";
-import { Link, useNavigate, useLocation } from "react-router"; // ✅ useLocation added
+import { Link, useNavigate, useLocation } from "react-router"; 
 import mascot2 from "../../assets/bill_buddy_mascot-2.png";
 import { AuthContext } from "../../components/Contexts/AuthContext";
 
 const SignIn = () => {
-  const { signInUser } = useContext(AuthContext);
+  const { signInUser,sendResetPass } = useContext(AuthContext);
   const navigate = useNavigate();
-  const location = useLocation(); // ✅ Get current location
-  const from = location.state?.from?.pathname || "/home"; // ✅ Fallback to /home
+  const location = useLocation(); 
+  const from = location.state?.from?.pathname || "/home"; 
 
   const [error, setError] = useState("");
 
@@ -22,14 +22,28 @@ const SignIn = () => {
       .then((result) => {
         const user = result.user;
         if (user) {
-          navigate(from, { replace: true }); // ✅ Redirect to previous page
+          navigate(from, { replace: true }); 
         }
       })
       .catch(() => {
         setError("Login failed: Invalid information");
       });
-  };
 
+
+   
+
+  };
+  const handleForgetPassword =(email)=>{
+    sendResetPass(email)
+    .then(() => {
+      alert("Password reset email sent!");
+     
+    })
+    .catch((error) => {
+      console.error("Error sending password reset email:", error.message);
+      
+    });
+  }
   return (
     <div className="w-11/12 min-h-screen mx-auto py-8 flex flex-col justify-center items-center">
       <h3 className="text-center text-[3rem] font-bold text-[#ff5c15] my-10">
@@ -126,6 +140,7 @@ const SignIn = () => {
                 />
               </div>
 
+                <p className='mt-2'>Forgot password? <Link onClick={handleForgetPassword} className="underline text-[#ff5c15]">click here</Link></p>
               <div>
                 <button
                   type="submit"

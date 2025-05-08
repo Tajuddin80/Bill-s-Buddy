@@ -2,7 +2,7 @@ import React, {  useContext } from 'react';
 import "./Navbar.css"
 import { Link, NavLink } from 'react-router';
 import { AuthContext } from '../Contexts/AuthContext';
-import avatar from '../.././assets/icons8-avatar.gif'
+
 
 
 const Navbar = () => {
@@ -44,7 +44,8 @@ const {user, handleLogOut, photo } = useContext(AuthContext)
   user ? 
   <div className='flex gap-4'>
   
-      <img className='w-12 rounded-full' alt="User Avatar" src={user ? photo : avatar} /> 
+  <img className="w-12 rounded-full" src={photo} alt="User Avatar" />
+
 
 
  <div>

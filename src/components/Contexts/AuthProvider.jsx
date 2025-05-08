@@ -1,10 +1,13 @@
+import {  sendPasswordResetEmail } from "firebase/auth";
 import React, { useState, useEffect } from "react";
+
 import { auth } from "../firebase.config";
 import {
   createUserWithEmailAndPassword,
   onAuthStateChanged,
   signInWithEmailAndPassword,
-  signOut,
+  signOut,signInWithPopup, GoogleAuthProvider,
+
 } from "firebase/auth";
 import { AuthContext } from "./AuthContext";
 
@@ -43,12 +46,12 @@ const AuthProvider = ({ children }) => {
     const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
 
-      // Load name & photo (check both old/new keys)
       const savedName = localStorage.getItem("userName") || localStorage.getItem("username");
       const savedPhoto = localStorage.getItem("userPhoto");
 
       if (savedName) setName(savedName);
-      if (savedPhoto) setPhoto(savedPhoto);
+      if (savedPhoto) setPhoto(savedPhoto || "https://i.postimg.cc/QM6LPFwV/icons8-avatar.gif");
+
 
       setLoading(false);
     });
@@ -67,6 +70,21 @@ const AuthProvider = ({ children }) => {
     return ids;
   };
 
+
+// google sign in
+const signInWithGoogle = () => {
+  const provider = new GoogleAuthProvider();
+  return signInWithPopup(auth, provider); 
+};
+
+// reset email 
+const sendResetPass =(email)=>{
+
+ return sendPasswordResetEmail(auth, email)
+
+}
+  
+
   const authData = {
     user,
     setUser,
@@ -77,10 +95,13 @@ const AuthProvider = ({ children }) => {
     setName,
     name,
     photo,
-    setPhoto,loading, setLoading
+    setPhoto,loading, setLoading, signInWithGoogle,sendResetPass
   };
 
   return <AuthContext.Provider value={authData}>{children}</AuthContext.Provider>;
 };
 
 export default AuthProvider;
+
+
+

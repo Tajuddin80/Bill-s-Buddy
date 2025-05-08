@@ -13,8 +13,8 @@ const ProfilePage = () => {
     const savedName = localStorage.getItem("userName");
     const savedPhoto = localStorage.getItem("userPhoto");
 
-    setNameInput(savedName || user?.displayName || "");
-    setPhotoUrl(savedPhoto || user?.photoURL || "https://via.placeholder.com/150");
+    setNameInput(savedName || user?.displayName || "Buddy");
+    setPhotoUrl(savedPhoto || user?.photoURL || "https://i.postimg.cc/QM6LPFwV/icons8-avatar.gif");
   }, [user]);
 
   const handleSubmit = (e) => {
@@ -68,7 +68,7 @@ const ProfilePage = () => {
             type="url"
             value={photoUrl}
             onChange={(e) => setPhotoUrl(e.target.value)}
-            placeholder="https://example.com/profile.jpg"
+            placeholder="https://i.postimg.cc/QM6LPFwV/icons8-avatar.gif"
             className="w-full border px-3 py-2 rounded focus:ring-orange-500 focus:outline-none"
             required
           />
