@@ -29,16 +29,12 @@ const AuthProvider = ({ children }) => {
   const handleLogOut = () => {
     logOut()
       .then(() => {
-  
-       
       })
       .catch((error) => {
-        // console.log(error);
+        console.log(error);
       });
   };
-
   const logOut = () => {
- 
     return signOut(auth);
   };
 
