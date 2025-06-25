@@ -18,7 +18,7 @@ Bill's Buddy simplifies bill management by allowing users to mark bills as paid/
 
 ## 📸 Screenshot
 
-<img src="https://your-image-link.com/bills-buddy-screenshot.png" alt="Bill's Buddy Screenshot" />
+<img src="https://github.com/Tajuddin80/Bill-s-Buddy/blob/main/bill-s-buddy.web.app_home_Pay-Airtime.png" alt="Bill's Buddy Screenshot" />
 
 *(Replace the image URL above with a real screenshot if available)*
 
